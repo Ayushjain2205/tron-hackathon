@@ -18,7 +18,7 @@ const Navbar = () => {
     console.log(pathname);
 
     // Set theme based on pathname
-    if (pathname === "/chat") {
+    if (pathname === "/agent") {
       setTheme("chat");
       setLineColor("#454545");
     } else {
@@ -40,10 +40,10 @@ const Navbar = () => {
       <div className="navbar-center"></div>
       <div className="navbar-end flex flex-row gap-[24px]">
         <div className="flex flex-row gap-[32px] text-[20px] text-[#fff] items-center">
-          <Link href="/chat">
+          <Link href="/agent">
             <span
               className={`text-${
-                active === "/chat" ? "gray-500 font-bold" : "[#fff]"
+                active === "/agent" ? "gray-500 font-bold" : "[#fff]"
               }`}
             >
               AGENT
