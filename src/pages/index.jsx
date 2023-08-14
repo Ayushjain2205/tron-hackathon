@@ -12,11 +12,11 @@ export default function Home() {
             <span className="absolute inset-x-0 bottom-0 h-[5px] bg-current"></span>
           </span>
         </p>
-        <a href="/api/auth/login">
-          <button className="w-[481px] h-[60px] bg-white rounded-[8px] text-[24px] font-bold text-[#699BF7] mt-[58px]">
-            LETS SIGN IN
-          </button>
-        </a>
+
+        <button className="w-[481px] h-[60px] bg-white rounded-[8px] text-[24px] font-bold text-[#699BF7] mt-[58px]">
+          LETS SIGN IN
+        </button>
+
         <p className="w-[333px] mt-[48px] text-white text-opacity-50 text-[36px] font-bold leading-[48px]">
           create your ally in 3 steps.
         </p>
