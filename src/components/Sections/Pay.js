@@ -8,7 +8,6 @@ const Pay = () => {
   const signMessage = async () => {
     const message = "Attestation request for template creation";
     const signature = await signer.signMessage(message);
-    console.log(signature);
   };
 
   return (
