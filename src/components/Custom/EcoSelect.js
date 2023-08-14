@@ -34,7 +34,7 @@ const EcoSelect = () => {
     console.log(pathname);
 
     // Set color based on pathname
-    if (pathname === "/chat") {
+    if (pathname === "/agent") {
       setLineColor("#454545");
     } else {
       setLineColor("#ffffff");
