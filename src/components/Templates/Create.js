@@ -13,11 +13,46 @@ const Create = () => {
   const [isGenerated, setIsGenerated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  const handleGenerate = () => {
+  // const handleGenerate = () => {
+  //   setIsGenerated(true);
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 3000);
+  // };
+
+  const handleGenerate = async () => {
     setIsGenerated(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+
+    // Get the value of the prompt. I'm not sure where you get this from in your code,
+    // so I'm just putting a placeholder here. Adjust accordingly.
+    const promptValue = prompt;
+
+    try {
+      // Assuming your API route is hosted at '/api/your-route-name'
+      const response = await fetch("/api/predictions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt: promptValue,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("API call failed");
+      }
+
+      const data = await response.json();
+
+      console.log("API Response:", data);
+    } catch (error) {
+      console.error("Error fetching API:", error);
+    } finally {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 3000);
+    }
   };
 
   return (
