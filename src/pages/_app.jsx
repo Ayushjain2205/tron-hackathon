@@ -21,7 +21,7 @@ function App({ Component, pageProps }) {
         metamaskWallet(),
         localWallet(),
         paperWallet({
-          clientId: "7f3a5a69-a739-40cd-b62d-8ef3667a81b8",
+          paperClientId: "7f3a5a69-a739-40cd-b62d-8ef3667a81b8",
         }),
       ]}
     >
