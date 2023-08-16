@@ -1,15 +1,9 @@
 import React, { useContext } from "react";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
+import colors from "../../data/colors";
 
 const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
   const { ecosystem } = useContext(EcoSystemContext);
-
-  const colors = {
-    ethereum: { border: "#627EEA", bg: "#627EEA", text: "white" },
-    linea: { border: "#62DFFF", bg: "#62DFFF", text: "black" },
-    polygon: { border: "#8a46ff", bg: "#8a46ff", text: "white" },
-    optimism: { border: "#fff", bg: "#FF0420", text: "white" },
-  };
 
   const nextPrompt = (e) => {
     e.stopPropagation();
