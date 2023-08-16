@@ -1,11 +1,10 @@
 import React, { useState, useContext } from "react";
 import TemplateHolder from "../UI/TemplateHolder";
 import Loader from "../Custom/Loader";
-import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import { Web3Button } from "@thirdweb-dev/react";
+import EcoIcon from "../Custom/EcoIcon";
 
 const Create = () => {
-  const { ecosystem } = useContext(EcoSystemContext);
   const [prompt, setPrompt] = useState(
     "UK countryside street on a sunny afternoon"
   );
@@ -96,11 +95,7 @@ const Create = () => {
             </select>
           </div>
           <div className="flex flex-row justify-between items-center  mt-[105px]">
-            <img
-              className="h-[36px] w-[36px]"
-              src={`/logos/${ecosystem}.svg`}
-              alt=""
-            />
+            <EcoIcon />
             <button
               className="w-[195px] h-[60px] bg-[#262626] text-white rounded-[8px] font-bold "
               onClick={handleGenerate}
@@ -165,15 +160,15 @@ const Create = () => {
                     London Scene
                   </p>
                   <p className="flex flex-row gap-[8px] items-center text-[12px]">
-                    <img className="h-[16px]" src="/zora.svg" alt="" />
+                    <img
+                      className="h-[16px]"
+                      src="/logos/ethereum.svg"
+                      alt=""
+                    />
                     <span className="text-[18px] ">0.01 ETH</span>
                   </p>
                   <div className="flex flex-row justify-between items-center  mt-[38px]">
-                    <img
-                      className="h-[36px] w-[36px]"
-                      src={`/logos/${ecosystem}.svg`}
-                      alt=""
-                    />
+                    <EcoIcon />
                     <Web3Button
                       contractAddress="0x50b21C8eCA540a92A1b07F18548cAd197Cad73Dc"
                       action={(contract) => contract.erc1155.claim(0, 1)}
