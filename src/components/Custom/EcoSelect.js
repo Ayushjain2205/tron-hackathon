@@ -3,14 +3,14 @@ import { usePathname } from "next/navigation";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import { useSwitchChain } from "@thirdweb-dev/react";
 import {
-  ModeTestnet,
   OptimismGoerli,
-  ZoraTestnet,
-  BaseGoerli,
+  LineaTestnet,
+  Ethereum,
+  Polygon,
 } from "@thirdweb-dev/chains";
 
 const EcoSelect = () => {
-  const [selectedImage, setSelectedImage] = useState("/logos/optimism.svg");
+  const [selectedImage, setSelectedImage] = useState("/logos/ethereum.svg");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [lineColor, setLineColor] = useState("#ffffff");
@@ -31,8 +31,6 @@ const EcoSelect = () => {
 
   const pathname = usePathname();
   useEffect(() => {
-    console.log(pathname);
-
     // Set color based on pathname
     if (pathname === "/agent") {
       setLineColor("#454545");
@@ -73,41 +71,13 @@ const EcoSelect = () => {
           <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px] ">
             <button
               onClick={() => {
-                handleChange("/logos/optimism.svg", "optimism");
-                switchChain(OptimismGoerli.chainId);
+                handleChange("/logos/ethereum.svg", "ethereum");
+                switchChain(Ethereum.chainId);
               }}
             >
               <img
-                src="/logos/optimism.svg"
-                alt="Option 1"
-                className="w-[48px] h-[48px]"
-              />
-            </button>
-          </li>
-          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px] ">
-            <button
-              onClick={() => {
-                handleChange("/logos/base.svg", "base");
-                switchChain(BaseGoerli.chainId);
-              }}
-            >
-              <img
-                src="/logos/base.svg"
+                src="/logos/ethereum.svg"
                 alt="Option 2"
-                className="w-[48px] h-[48px]"
-              />
-            </button>
-          </li>
-          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px]">
-            <button
-              onClick={() => {
-                handleChange("/logos/zora.svg", "zora");
-                switchChain(ZoraTestnet.chainId);
-              }}
-            >
-              <img
-                src="/logos/zora.svg"
-                alt="Option 3"
                 className="w-[48px] h-[48px]"
               />
             </button>
@@ -115,13 +85,41 @@ const EcoSelect = () => {
           <li className="flex flex-row justify-center items-center cursor-pointer w-full h-[60px]">
             <button
               onClick={() => {
-                handleChange("/logos/mode.svg", "mode");
-                switchChain(ModeTestnet.chainId);
+                handleChange("/logos/linea.svg", "linea");
+                switchChain(LineaTestnet.chainId);
               }}
             >
               <img
-                src="/logos/mode.svg"
+                src="/logos/linea.svg"
                 alt="Option 4"
+                className="w-[48px] h-[48px]"
+              />
+            </button>
+          </li>
+          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px]">
+            <button
+              onClick={() => {
+                handleChange("/logos/polygon.svg", "polygon");
+                switchChain(Polygon.chainId);
+              }}
+            >
+              <img
+                src="/logos/polygon.svg"
+                alt="Option 3"
+                className="w-[48px] h-[48px]"
+              />
+            </button>
+          </li>
+          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px] ">
+            <button
+              onClick={() => {
+                handleChange("/logos/optimism.svg", "optimism");
+                switchChain(OptimismGoerli.chainId);
+              }}
+            >
+              <img
+                src="/logos/optimism.svg"
+                alt="Option 1"
                 className="w-[48px] h-[48px]"
               />
             </button>

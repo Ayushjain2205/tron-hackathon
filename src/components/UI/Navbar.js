@@ -15,7 +15,6 @@ const Navbar = () => {
 
   useEffect(() => {
     setActive(pathname);
-    console.log(pathname);
 
     // Set theme based on pathname
     if (pathname === "/agent") {

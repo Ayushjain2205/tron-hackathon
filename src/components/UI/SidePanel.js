@@ -5,10 +5,10 @@ const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
   const { ecosystem } = useContext(EcoSystemContext);
 
   const colors = {
+    ethereum: { border: "#627EEA", bg: "#627EEA", text: "black" },
+    linea: { border: "#62DFFF", bg: "#62DFFF", text: "white" },
+    polygon: { border: "#8a46ff", bg: "#8a46ff", text: "white" },
     optimism: { border: "#fff", bg: "#FF0420", text: "white" },
-    base: { border: "#0052FE", bg: "#0052FE", text: "white" },
-    zora: { border: "#909090", bg: "#909090", text: "white" },
-    mode: { border: "#DFFE00", bg: "#DFFE00", text: "black" },
   };
 
   const nextPrompt = (e) => {

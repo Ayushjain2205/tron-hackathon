@@ -14,9 +14,9 @@ const Loader = () => {
       <Lottie
         loop
         animationData={
-          ecosystem === "mode"
+          ecosystem === "ethereum"
             ? mode
-            : ecosystem === "zora"
+            : ecosystem === "polygon"
             ? zora
             : ecosystem === "optimism"
             ? optimisim
