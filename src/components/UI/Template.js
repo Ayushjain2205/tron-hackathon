@@ -3,6 +3,7 @@ import Create from "../Templates/Create";
 import Deploy from "../Templates/Deploy";
 import Guide from "../Templates/Guide";
 import None from "../Templates/None";
+import SendMoney from "../Templates/SendMoney";
 
 const Template = ({ template }) => {
   let component;
@@ -16,6 +17,9 @@ const Template = ({ template }) => {
       break;
     case "guide":
       component = <Guide />;
+      break;
+    case "sendMoney":
+      component = <SendMoney />;
       break;
     default:
       component = <None text={template} />;
