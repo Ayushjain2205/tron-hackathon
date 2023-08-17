@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import TemplateHolder from "../UI/TemplateHolder";
+import getColor from "../../utils/getColor";
 
 const Reminder = ({ placeholder }) => {
   const [isSaving, setIsSaving] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
+
+  const bgColor = getColor();
 
   const handleSave = () => {
     setIsSaving(true);
@@ -46,7 +49,10 @@ const Reminder = ({ placeholder }) => {
         </div>
       </TemplateHolder>
       {isSaved && (
-        <p className="text-[28px] font-bold mt-[24px] text-[#D2146E]">
+        <p
+          className="text-[28px] font-bold mt-[24px]"
+          style={{ color: bgColor }}
+        >
           👏 Wohooo! Creating Reminder was successful
         </p>
       )}
