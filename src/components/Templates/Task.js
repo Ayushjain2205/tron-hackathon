@@ -68,7 +68,10 @@ const Task = () => {
         </div>
       </TemplateHolder>
       {isSaved && (
-        <p className="text-[28px] font-bold mt-[24px] text-[#00BFFF]">
+        <p
+          className="text-[28px] font-bold mt-[24px]"
+          style={{ color: bgColor }}
+        >
           👏 Wohooo! Creating Task was successful
         </p>
       )}
