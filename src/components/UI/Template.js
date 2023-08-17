@@ -8,6 +8,7 @@ import Reminder from "../Templates/Reminder";
 import Task from "../Templates/Task";
 import Drop from "../Templates/Drop";
 import WalletHealth from "../Templates/WalletHealth";
+import Bridge from "../Templates/Bridge";
 
 const Template = ({ template }) => {
   let component;
@@ -36,6 +37,9 @@ const Template = ({ template }) => {
       break;
     case "walletHealth":
       component = <WalletHealth />;
+      break;
+    case "bridge":
+      component = <Bridge />;
       break;
     default:
       component = <None text={template} />;
