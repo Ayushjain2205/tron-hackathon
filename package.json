@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@goplus/sdk-node": "^1.0.8",
     "@radix-ui/react-select": "^1.2.2",
     "@thirdweb-dev/react": "^3.14.26",
     "@thirdweb-dev/sdk": "^3.10.45",
