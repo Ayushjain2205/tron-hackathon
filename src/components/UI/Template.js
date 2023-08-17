@@ -6,6 +6,7 @@ import None from "../Templates/None";
 import SendMoney from "../Templates/SendMoney";
 import Reminder from "../Templates/Reminder";
 import Task from "../Templates/Task";
+import Drop from "../Templates/Drop";
 
 const Template = ({ template }) => {
   let component;
@@ -28,6 +29,9 @@ const Template = ({ template }) => {
       break;
     case "task":
       component = <Task />;
+      break;
+    case "drop":
+      component = <Drop />;
       break;
     default:
       component = <None text={template} />;
