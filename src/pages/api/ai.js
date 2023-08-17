@@ -64,6 +64,6 @@ export default async function handler(req, res) {
   // }
 
   setTimeout(() => {
-    res.status(200).json({ message: "sendMoney" });
+    res.status(200).json({ message: "reminder" });
   }, 1000);
 }

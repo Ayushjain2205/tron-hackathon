@@ -4,6 +4,7 @@ import Deploy from "../Templates/Deploy";
 import Guide from "../Templates/Guide";
 import None from "../Templates/None";
 import SendMoney from "../Templates/SendMoney";
+import Reminder from "../Templates/Reminder";
 
 const Template = ({ template }) => {
   let component;
@@ -20,6 +21,9 @@ const Template = ({ template }) => {
       break;
     case "sendMoney":
       component = <SendMoney />;
+      break;
+    case "reminder":
+      component = <Reminder />;
       break;
     default:
       component = <None text={template} />;
