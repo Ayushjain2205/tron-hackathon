@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import TemplateHolder from "../UI/TemplateHolder";
+import getColor from "../../utils/getColor";
 
 const Task = () => {
   const [isSaving, setIsSaving] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
+
+  const bgColor = getColor();
 
   const handleSave = () => {
     setIsSaving(true);
@@ -26,7 +29,10 @@ const Task = () => {
             value="Look for NFTs under 500 UNQ"
           />
           <div className="flex flex-row mt-[16px] gap-[9px]">
-            <div className="flex flex-col items-center justify-center rounded-[12px] w-[69px] h-[45px] bg-[#00BFFF] text-[16px] font-bold text-white">
+            <div
+              className="flex flex-col items-center justify-center rounded-[12px] w-[69px] h-[45px] text-[16px] font-bold text-white"
+              style={{ backgroundColor: bgColor }}
+            >
               ETH
             </div>
             <input
