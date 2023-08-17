@@ -32,9 +32,9 @@ const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
 
         return (
           <div
-            onClick={() => setInputValue(message)} // Set input value on click
+            onClick={() => setInputValue(message)}
             style={{ border: `1px solid ${colors[ecosystem].border}` }}
-            className="h-[180px] w-[558px] rounded-[20px] cursor-pointer" // added cursor-pointer to indicate it's clickable
+            className="h-[180px] w-[558px] rounded-[20px] cursor-pointer"
             key={index}
           >
             <div className="flex flex-row pl-[24px] pt-[44px] pr-[32px] justify-between">
@@ -49,7 +49,7 @@ const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
                   <path d="M0 2H81" stroke="#D9D9D9" strokeWidth="4" />
                 </svg>
                 <p style={{ color: "#D9D9D9" }} className="text-[32px]">
-                  {title} {/* Fixed here, replaced {text} with {title} */}
+                  {title}
                 </p>
               </div>
               <img
