@@ -1,6 +1,5 @@
 import { GoPlus, ErrorCode } from "@goplus/sdk-node";
 
-// Next.js API route handler
 export default async function handler(req, res) {
   const { address } = req.query;
   const chainId = req.query.chainId || "1";
