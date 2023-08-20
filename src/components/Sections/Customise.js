@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import TemplatePreview from "../Custom/TemplatePreview";
 
 const Customise = ({ handleNext }) => {
-  const [inputFields, setInputFields] = useState([1]);
+  const [inputFields, setInputFields] = useState(["I want to mint a cool NFT"]);
 
   const handleAddInput = () => {
-    setInputFields((prevFields) => [...prevFields, prevFields.length + 1]);
+    setInputFields((prevFields) => [...prevFields, ""]);
   };
 
   return (
@@ -51,10 +51,11 @@ const Customise = ({ handleNext }) => {
               </svg>
             </label>
             <div className="flex flex-col gap-[12px]">
-              {inputFields.map((_, index) => (
+              {inputFields.map((value, index) => (
                 <input
                   key={index}
                   type="text"
+                  defaultValue={value}
                   placeholder="Enter prompt here"
                   className="input bg-white rounded-[10px] w-[646px] h-[64px] focus:outline-none "
                 />
@@ -76,11 +77,15 @@ const Customise = ({ handleNext }) => {
                 Choose NFT categories
               </span>
             </label>
-            <select className="select select-ghost bg-white rounded-[10px] w-[646px] h-[64px] focus:outline-none">
-              <option disabled selected></option>
+            <select
+              defaultValue="Generated"
+              className="select select-ghost bg-white rounded-[10px] w-[646px] h-[64px] focus:outline-none"
+            >
+              <option disabled>Choose an option</option>
               <option>Art</option>
               <option>Sports</option>
               <option>Music</option>
+              <option>Generated</option>
             </select>
           </div>
           <div className="form-control w-full">
@@ -91,6 +96,7 @@ const Customise = ({ handleNext }) => {
             </label>
             <input
               type="text"
+              defaultValue="0xE36399DA91705Dd550230ea720ce28828bDEA46b"
               placeholder="Paste here..."
               className="input bg-white rounded-[10px] w-[646px] h-[64px] focus:outline-none "
             />
@@ -98,7 +104,7 @@ const Customise = ({ handleNext }) => {
         </div>
         <TemplatePreview />
       </div>
-      <div className="flex flex-row justify-between items-center mt-[48px]">
+      <div className="flex flex-row justify-between items-center mt-[24px]">
         <div className="flex flex-row gap-[24px]">
           <span className="text-[32px] font-bold border-t-4 text-[#699BF7] border-[#699BF7]">
             Buy nft
