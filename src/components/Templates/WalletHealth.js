@@ -33,8 +33,8 @@ const WalletHealth = () => {
           <hr />
           <div className="collapse collapse-arrow border-b rounded-none">
             <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-[20px]">Top NFTs</div>
-            <div className="collapse-content">
+            <div className="collapse-title text-[20px] pl-0">Top NFTs</div>
+            <div className="collapse-content pl-0">
               <div className="flex flex-row gap-[16px] hide-scrollbar w-[700px] overflow-scroll">
                 <img
                   className="h-[159px] w-[159px] rounded-[6px]"
@@ -66,10 +66,10 @@ const WalletHealth = () => {
           </div>
           <div className="collapse collapse-arrow border-b rounded-none">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div className="collapse-title text-[20px]">Warning</div>
-            <div className="collapse-content flex flex-col gap-[14px]">
+            <div className="collapse-title text-[20px] pl-0">Warning</div>
+            <div className="collapse-content pl-0 flex flex-col gap-[14px]">
               <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
-                <span className="text-[16px] text-[#E53E3E] font-bold">
+                <span className="text-[16px] text-white font-bold">
                   You have made UNLIMITED confirmations
                 </span>
                 <svg
@@ -87,7 +87,7 @@ const WalletHealth = () => {
                 </svg>
               </div>
               <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
-                <span className="text-[16px] font-bold">
+                <span className="text-[16px] text-white font-bold">
                   You have made UNLIMITED confirmations.
                 </span>
                 <svg

@@ -64,7 +64,7 @@ const chat = () => {
   };
   return (
     <Layout theme="chat">
-      <div className="flex flex-row gap-[160px] min-h-[852px] pt-[40px] text-[#D1D2D3]">
+      <div className="flex flex-row gap-[228px] min-h-[852px] pt-[40px] text-[#D1D2D3]">
         <div className="flex flex-col w-[878px]">
           <input
             value={inputValue}
