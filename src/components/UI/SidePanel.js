@@ -1,9 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import colors from "../../data/colors";
+import panel_items from "../../data/panel_items";
 
 const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
   const { ecosystem } = useContext(EcoSystemContext);
+
+  const cardsRef = useRef(null); // Initialize the ref
+
+  const scrollCards = () => {
+    // Scroll the cards div by 100 pixels (or any other value you prefer)
+    cardsRef.current.scrollBy({ top: 100, behavior: "smooth" });
+  };
 
   const nextPrompt = (e) => {
     e.stopPropagation();
@@ -12,60 +20,13 @@ const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
     setOutputContent("");
   };
 
-  const inputs = [
-    {
-      title: "Wallet Health",
-      prompt:
-        "Create a step-by-step guide on how to deploy a sample contract using thirdweb",
-      img: "/cats/cat3.svg",
-    },
-    {
-      title: "User manual",
-      prompt:
-        "Create a step-by-step guide on how to deploy a sample contract using thirdweb",
-      img: "/cats/cat5.svg",
-    },
-    {
-      title: "Generate NFTS!!!",
-      prompt: "I want to mint a NFT",
-      img: "/cats/cat2.svg",
-    },
-    {
-      title: "User Manual",
-      prompt: "",
-      img: "/speech-bubble.svg",
-    },
-    {
-      title: "Deploy smart contract",
-      prompt: "Help me create a NFT collection on mode network",
-      img: "/cats/cat3.svg",
-    },
-    {
-      title: "Deploy smart contract",
-      prompt: "Help me create a NFT collection on mode network",
-      img: "/cats/cat3.svg",
-    },
-    {
-      title: "Generate NFTS!!!",
-      prompt: "I want to mint a NFT",
-      img: "/cats/cat2.svg",
-    },
-    {
-      title: "Deploy smart contract",
-      prompt: "Help me create a NFT collection on mode network",
-      img: "/cats/cat3.svg",
-    },
-    {
-      title: "User Manual",
-      prompt: "",
-      img: "/speech-bubble.svg",
-    },
-  ];
-
   return (
     <div className="flex flex-col ">
-      <div className=" flex flex-col gap-[24px] mt-[100px] h-[472px] overflow-scroll hide-scrollbar">
-        {inputs.map((input, index) => {
+      <div
+        ref={cardsRef}
+        className=" flex flex-col gap-[24px] mt-[100px] h-[472px] overflow-scroll hide-scrollbar"
+      >
+        {panel_items.map((input, index) => {
           const { title, prompt, img } = input;
 
           return (
@@ -91,7 +52,10 @@ const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
         })}
       </div>
 
-      <div className="flex flex-row justify-center mt-[24px] mb-[64px]">
+      <div
+        className="flex flex-row justify-center mt-[24px] mb-[64px] cursor-pointer"
+        onClick={scrollCards}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"
