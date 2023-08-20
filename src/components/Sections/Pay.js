@@ -7,7 +7,7 @@ const Pay = () => {
   const signer = useSigner();
 
   const signMessage = async () => {
-    const message = "Attestation request for template creation";
+    const message = "You are creating a BUY NFT template for Entropy Squad💀";
     const signature = await signer.signMessage(message);
   };
 
