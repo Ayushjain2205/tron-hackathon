@@ -24,9 +24,7 @@ const TemplateHolder = ({ title, children }) => {
           alt=""
         />
       </div>
-      <div className="flex flex-col p-[16px] pt-[24px] text-black">
-        {children}
-      </div>
+      <div className="flex flex-col p-[24px] text-black">{children}</div>
     </div>
   );
 };
