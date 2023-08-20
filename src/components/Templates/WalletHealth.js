@@ -6,143 +6,101 @@ const WalletHealth = () => {
     <div>
       <TemplateHolder title="About wallet">
         <div className="flex flex-col gap-[16px]">
-          <div className="flex flex-row w-[413px] justify-between">
-            <span className="text-black text-[20px]">TOKEN</span>
-            <span className="text-[#D2146E] font-bold text-[20px]">GLMR</span>
-          </div>
-          <div className="flex flex-row w-[413px] justify-between">
+          <div className="flex flex-row  w-[700px] justify-between">
             <span className="text-black text-[20px]">Balance</span>
-            <span className="text-[#D2146E] font-bold text-[20px]">
-              70 GLMR
-            </span>
+            <span className="text-[#D2146E] font-bold text-[20px]">70 ETH</span>
           </div>
-          <div className="flex flex-row w-[413px] justify-between">
+          <div className="flex flex-row w-[700px] justify-between">
             <span className="text-black text-[20px]">Portfolio</span>
             <span className="text-[#D2146E] font-bold text-[20px]">
-              426 GLMR
+              426 ETH
             </span>
           </div>
-          <div className="flex flex-row w-[413px] justify-between">
+          <div className="flex flex-row w-[700px] justify-between">
             <span className="text-black text-[20px]">Health score</span>
             <span className="text-[#007BFF] font-bold text-[20px]">74/100</span>
           </div>
-          <div className="flex flex-row w-[413px] justify-between">
+          <div className="flex flex-row w-[700px] justify-between">
             <span className="text-black text-[20px]">Exposure</span>
             <span className="text-[#007BFF] font-bold text-[20px]">
               False 👍
             </span>
           </div>
           <hr />
-          <div className="flex flex-row w-[413px] justify-between">
-            <span className="text-black text-[20px]">Top NFTs</span>
+          <div className="collapse collapse-arrow border-b rounded-none">
+            <input type="radio" name="my-accordion-2" />
+            <div className="collapse-title text-[20px]">Top NFTs</div>
+            <div className="collapse-content">
+              <div className="flex flex-row gap-[16px] hide-scrollbar w-[700px] overflow-scroll">
+                <img
+                  className="h-[159px] w-[159px] rounded-[6px]"
+                  src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                  alt=""
+                />
+                <img
+                  className="h-[159px] w-[159px] rounded-[6px]"
+                  src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                  alt=""
+                />
+                <img
+                  className="h-[159px] w-[159px] rounded-[6px]"
+                  src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                  alt=""
+                />
+                <img
+                  className="h-[159px] w-[159px] rounded-[6px]"
+                  src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                  alt=""
+                />
+                <img
+                  className="h-[159px] w-[159px] rounded-[6px]"
+                  src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
-          <div className="flex flex-row w-[413px] justify-between">
-            <span className="text-black text-[20px]">MoonPets</span>
-            <span className="text-[#007BFF] font-bold text-[20px]">
-              <a href="" target="_blank" referrerPolicy="no-referrer">
+          <div className="collapse collapse-arrow border-b rounded-none">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div className="collapse-title text-[20px]">Warning</div>
+            <div className="collapse-content flex flex-col gap-[14px]">
+              <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
+                <span className="text-[16px] text-[#E53E3E] font-bold">
+                  You have made UNLIMITED confirmations
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
                   fill="none"
+                  viewBox="0 0 24 24"
+                  className="stroke-white shrink-0 w-6 h-6"
                 >
                   <path
-                    d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
-                    stroke="black"
-                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                  />
-                  <path
-                    d="M15 3H21V9"
-                    stroke="black"
                     strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M10 14L21 3"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
                 </svg>
-              </a>
-            </span>
-          </div>
-          <div className="flex flex-row w-[413px] justify-between">
-            <span className="text-black text-[20px]">Polkadot Builders</span>
-            <span className="text-[#007BFF] font-bold text-[20px]">
-              <a href="" target="_blank" referrerPolicy="no-referrer">
+              </div>
+              <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
+                <span className="text-[16px] font-bold">
+                  You have made UNLIMITED confirmations.
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
                   fill="none"
+                  viewBox="0 0 24 24"
+                  className="stroke-white shrink-0 w-6 h-6"
                 >
                   <path
-                    d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
-                    stroke="black"
-                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                  />
-                  <path
-                    d="M15 3H21V9"
-                    stroke="black"
                     strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M10 14L21 3"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
                 </svg>
-              </a>
-            </span>
-          </div>
-          <div className="flex flex-row w-[413px] justify-between">
-            <span className="text-black text-[20px]">Beanies</span>
-            <span className="text-[#007BFF] font-bold text-[20px]">
-              <a href="" target="_blank" referrerPolicy="no-referrer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M15 3H21V9"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M10 14L21 3"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-            </span>
+              </div>
+            </div>
           </div>
         </div>
       </TemplateHolder>

@@ -64,6 +64,6 @@ export default async function handler(req, res) {
   // }
 
   setTimeout(() => {
-    res.status(200).json({ message: "mintNFT" });
+    res.status(200).json({ message: "walletHealth" });
   }, 1000);
 }
