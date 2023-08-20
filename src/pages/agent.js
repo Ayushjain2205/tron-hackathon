@@ -3,6 +3,7 @@ import Layout from "../components/UI/Layout";
 import SidePanel from "../components/UI/SidePanel";
 import Template from "../components/UI/Template";
 import Loader from "../components/Custom/Loader";
+import responseIntro from "../data/response_intro";
 
 const chat = () => {
   const [inputValue, setInputValue] = useState("");
@@ -19,24 +20,6 @@ const chat = () => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
-
-  const responseIntro = [
-    {
-      mintNFT:
-        "Sure I can help you mint an NFT. You can generate it using AI, doesn't that sound fun?",
-    },
-    {
-      smartContract:
-        "Yes, I can help you deploy a smart contract. Just 3 clicks away!",
-    },
-    {
-      guide:
-        "I think breaking complex things down into byte sized chunks is the best way to learn. Here you go:",
-    },
-    {
-      none: "Sorry, I don't understand. Please try again.",
-    },
-  ];
 
   const getResponseIntroText = (text) => {
     const foundItem = responseIntro.find((item) => item[text]);
@@ -70,16 +53,6 @@ const chat = () => {
     <Layout theme="chat">
       <div className="flex flex-row gap-[228px] min-h-[852px] pt-[40px] text-[#D1D2D3]">
         <div className="flex flex-col w-[878px]">
-          {/* <input
-            value={inputValue}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyPress}
-            type="text"
-            className="w-[878px] h-[54px] overflow-y-auto resize-none bg-transparent border-b-2 border-[#F1F1F1] focus:outline-none text-[32px] font-medium mb-[24px]"
-            placeholder="What may I do for you?"
-            name=""
-            id=""
-          /> */}
           <div className="relative w-[878px] h-[54px] mb-[24px]">
             <input
               value={inputValue}
