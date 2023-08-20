@@ -1,18 +1,22 @@
 import React from "react";
 import TemplateHolder from "../UI/TemplateHolder";
+import getColor from "../../utils/getColor";
 
 const WalletHealth = () => {
+  const bgColor = getColor();
   return (
     <div>
       <TemplateHolder title="About wallet">
         <div className="flex flex-col gap-[16px]">
           <div className="flex flex-row  w-[700px] justify-between">
             <span className="text-black text-[20px]">Balance</span>
-            <span className="text-[#D2146E] font-bold text-[20px]">70 ETH</span>
+            <span className="font-bold text-[20px]" style={{ color: bgColor }}>
+              70 ETH
+            </span>
           </div>
           <div className="flex flex-row w-[700px] justify-between">
             <span className="text-black text-[20px]">Portfolio</span>
-            <span className="text-[#D2146E] font-bold text-[20px]">
+            <span className=" font-bold text-[20px]" style={{ color: bgColor }}>
               426 ETH
             </span>
           </div>
