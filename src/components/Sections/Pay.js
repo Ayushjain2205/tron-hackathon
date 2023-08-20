@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Step4 from "../Steps/Step4";
 import { useSigner } from "@thirdweb-dev/react";
+import { MetaMaskSDK } from "@metamask/sdk";
 
 const Pay = () => {
   const signer = useSigner();
@@ -10,6 +11,16 @@ const Pay = () => {
     const signature = await signer.signMessage(message);
   };
 
+  const options = {
+    dappMetadata: {
+      name: "Ally",
+      url: "https://navh.netlify.app",
+    },
+  };
+
+  const MMSDK = new MetaMaskSDK(options);
+  const ethereum = MMSDK.getProvider();
+
   return (
     <div className="flex flex-row mt-[58px] gap-[150px]">
       <div className="flex flex-col gap-[24px]">
@@ -18,9 +29,7 @@ const Pay = () => {
           onClick={signMessage}
           className="flex flex-row justify-between items-center w-[540px] h-[110px] rounded-[10px] bg-[#f8f8f8] p-[24px] cursor-pointer"
         >
-          <p className="text-[24px] w-[239px] text-[#699BF7]">
-            Complete attestion
-          </p>
+          <p className="text-[24px] w-[239px] text-[#699BF7]">Sign Template</p>
           <img src="/images/check.svg" alt="" />
         </div>
         <p className="text-[28px] mt-[8px]">Invoice</p>
