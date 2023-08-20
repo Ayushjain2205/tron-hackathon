@@ -11,10 +11,7 @@ const TemplateHolder = ({ title, children }) => {
         style={{ backgroundColor: colors[ecosystem].bg }}
         className={`h-[60px] flex flex-row justify-between items-center p-[16px] rounded-t-[18px] text-[20px]`}
       >
-        <p
-          style={{ color: colors[ecosystem].text }}
-          className="text-[28px] font-bold"
-        >
+        <p style={{ color: colors[ecosystem].text }} className="text-[24px] ">
           {title}
         </p>
         <img
