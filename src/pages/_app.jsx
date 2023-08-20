@@ -16,7 +16,7 @@ function App({ Component, pageProps }) {
     <ThirdwebProvider
       activeChain={OptimismGoerli}
       supportedChains={[OptimismGoerli, BaseGoerli, ZoraTestnet, ModeTestnet]}
-      clientId="5dbb8f1abc71686e44ab6ff02c6a9a92"
+      clientId="7a96064a5047b6af0b9b1125a11562ca"
       supportedWallets={[
         metamaskWallet(),
         localWallet(),
