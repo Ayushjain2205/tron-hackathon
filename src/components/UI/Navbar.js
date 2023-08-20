@@ -72,13 +72,10 @@ const Navbar = () => {
           </summary>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-[#f5f5f5] rounded-[18px] w-[250px] "
+            className="dropdown-content z-[1] menu p-2 shadow bg-[#f5f5f5] rounded-[15px] w-[250px] mt-[10px] "
           >
             <li>
               <ConnectWallet />
-            </li>
-            <li>
-              <a href="/api/auth/logout">Logout</a>
             </li>
           </ul>
         </details>
