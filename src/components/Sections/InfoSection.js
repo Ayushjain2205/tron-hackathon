@@ -18,6 +18,7 @@ const InfoSection = ({ handleNext }) => {
               </span>
             </label>
             <input
+              defaultValue="Entropy Squad💀"
               type="text"
               className="input bg-white rounded-[10px] w-[460px] h-[64px] focus:outline-none "
             />
@@ -29,6 +30,7 @@ const InfoSection = ({ handleNext }) => {
               </span>
             </label>
             <input
+              defaultValue="https://testnets.opensea.io/collection/entropy-squad-1"
               type="text"
               className="input bg-white rounded-[10px] w-[460px] h-[64px] focus:outline-none "
             />
@@ -89,8 +91,8 @@ const InfoSection = ({ handleNext }) => {
               </span>
             </label>
             <div className="flex flex-row gap-[10px]">
-              <Colorpicker />
-              <Colorpicker />
+              <Colorpicker rgba="rgba(243,97,73,1)" />
+              <Colorpicker rgba="rgba(252,185,0,1)" />
               <Colorpicker />
             </div>
           </div>

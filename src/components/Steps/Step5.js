@@ -12,7 +12,7 @@ const Step5 = () => {
         className="text-[#1A64BC] underline"
         target="_blank"
         rel="noreferrer"
-        href="https://explorer.zora.energy/tx/0x3e8db7458dcd6cecfe145090282fa21c4a506b528bf523c5875ae11b3a69c2f7"
+        href="https://goerli.lineascan.build/tx/0xa844a76c9e61e01efdaa8aec5193e4a7efa124d083c8384b9a1a71728a0784d0"
       >
         View on block explorer
       </a>
