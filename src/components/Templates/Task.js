@@ -26,7 +26,7 @@ const Task = () => {
           <input
             type="text"
             className="input input-bordered border-[#DDD] rounded-[12px] w-[705px] focus:outline-none text-black"
-            value="Look for NFTs under 500 UNQ"
+            value="Look for NFTs under 0.01 ETH"
           />
           <div className="flex flex-row mt-[16px] gap-[9px]">
             <div
