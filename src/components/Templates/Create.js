@@ -89,9 +89,10 @@ const Create = () => {
           </p>
           <div>
             <select className="select select-bordered border-[#fff] bg-[#fff] rounded-[12px] w-[545px] h-[60px] text-black font-normal text-[16px] focus:outline-none">
-              <option selected>Optimism</option>
-              <option>Base</option>
-              <option>Zora</option>
+              <option selected>Ethereum</option>
+              <option>Linea</option>
+              <option>Polygon</option>
+              <option>Optimism</option>
             </select>
           </div>
           <div className="flex flex-row justify-between items-center  mt-[105px]">
