@@ -11,48 +11,53 @@ const Create = () => {
 
   const [isGenerated, setIsGenerated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMinting, setIsMinting] = useState(false);
 
-  // const handleGenerate = () => {
-  //   setIsGenerated(true);
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 3000);
-  // };
-
-  const handleGenerate = async () => {
+  const handleGenerate = () => {
     setIsGenerated(true);
-
-    // Get the value of the prompt. I'm not sure where you get this from in your code,
-    // so I'm just putting a placeholder here. Adjust accordingly.
-    const promptValue = prompt;
-
-    try {
-      // Assuming your API route is hosted at '/api/your-route-name'
-      const response = await fetch("/api/predictions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          prompt: promptValue,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("API call failed");
-      }
-
-      const data = await response.json();
-
-      console.log("API Response:", data);
-    } catch (error) {
-      console.error("Error fetching API:", error);
-    } finally {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 3000);
-    }
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   };
+
+  const handleMint = async () => {
+    setIsMinting(true);
+  };
+
+  // const handleGenerate = async () => {
+  //   setIsGenerated(true);
+
+  //   // Get the value of the prompt. I'm not sure where you get this from in your code,
+  //   // so I'm just putting a placeholder here. Adjust accordingly.
+  //   const promptValue = prompt;
+
+  //   try {
+  //     // Assuming your API route is hosted at '/api/your-route-name'
+  //     const response = await fetch("/api/predictions", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         prompt: promptValue,
+  //       }),
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error("API call failed");
+  //     }
+
+  //     const data = await response.json();
+
+  //     console.log("API Response:", data);
+  //   } catch (error) {
+  //     console.error("Error fetching API:", error);
+  //   } finally {
+  //     setTimeout(() => {
+  //       setIsLoading(false);
+  //     }, 3000);
+  //   }
+  // };
 
   return (
     <TemplateHolder title="Create NFT">
@@ -170,19 +175,26 @@ const Create = () => {
                   </p>
                   <div className="flex flex-row justify-between items-center  mt-[38px]">
                     <EcoIcon />
-                    <Web3Button
+                    {/* <Web3Button
                       contractAddress="0x50b21C8eCA540a92A1b07F18548cAd197Cad73Dc"
                       action={(contract) => contract.erc1155.claim(0, 1)}
                       className="connect-wallet-button mint-button"
                     >
                       MINT
-                    </Web3Button>
-                    {/* <button
-                      className="w-[195px] h-[60px] bg-[#262626] text-white rounded-[8px] font-bold"
-                      onClick={handleGenerate}
+                    </Web3Button> */}
+                    <button
+                      className="flex flex-row items-center justify-center w-[195px] h-[60px] bg-[#262626] text-white rounded-[8px] font-bold"
+                      onClick={handleMint}
                     >
-                      MINT
-                    </button> */}
+                      {!isMinting ? (
+                        "MINT"
+                      ) : (
+                        <>
+                          <span className="loading loading-spinner"></span>
+                          &nbsp;MINTING
+                        </>
+                      )}
+                    </button>
                   </div>
                 </div>
               </div>

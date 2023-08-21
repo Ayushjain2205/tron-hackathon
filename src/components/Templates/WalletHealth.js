@@ -23,7 +23,7 @@ const WalletHealth = () => {
 
       if (currentIndex === loadingTexts.length) {
         clearInterval(intervalId);
-        setIsLoading(false); // stop loading after all texts have been shown
+        setIsLoading(false);
       }
     }, 1500);
 
