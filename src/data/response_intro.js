@@ -14,6 +14,12 @@ const responseIntro = [
   {
     none: "Sorry, I don't understand. Please try again.",
   },
+  {
+    walletHealth: "Sure, Here is a detailed report of your wallet health.",
+  },
+  {
+    drop: "For sure! You should definitely check out this exciting drop.",
+  },
 ];
 
 export default responseIntro;
