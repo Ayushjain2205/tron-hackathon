@@ -34,7 +34,7 @@ const WalletHealth = () => {
   return (
     <div>
       <TemplateHolder title="About wallet">
-        <div className="flex flex-col gap-[16px] h-[489px] w-[716px]">
+        <div className="flex flex-col gap-[16px] h-[520px] w-[716px]">
           {!isLoading ? (
             <>
               <div className="flex flex-row  w-[700px] justify-between">
@@ -70,7 +70,7 @@ const WalletHealth = () => {
               <hr />
               <div className="collapse collapse-arrow border-b rounded-none">
                 <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-[20px] pl-0">Top NFTs</div>
+                <div className="collapse-title text-[20px] pl-0 ">Top NFTs</div>
                 <div className="collapse-content pl-0">
                   <div className="flex flex-row gap-[16px] hide-scrollbar w-[700px] overflow-scroll">
                     <img
@@ -80,22 +80,22 @@ const WalletHealth = () => {
                     />
                     <img
                       className="h-[159px] w-[159px] rounded-[6px]"
-                      src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                      src="https://i.seadn.io/gcs/files/b6d40f582015cdad01984aacfb1ffbe7.jpg?auto=format&dpr=1&w=1000"
                       alt=""
                     />
                     <img
                       className="h-[159px] w-[159px] rounded-[6px]"
-                      src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                      src="https://i.seadn.io/gcs/files/6306325c8d4f2f084610e85f88efe387.jpg?auto=format&dpr=1&w=1000"
                       alt=""
                     />
                     <img
                       className="h-[159px] w-[159px] rounded-[6px]"
-                      src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                      src="https://i.seadn.io/gcs/files/c8d0dc4e957ed3e554cbe108329475bb.jpg?auto=format&dpr=1&w=1000"
                       alt=""
                     />
                     <img
                       className="h-[159px] w-[159px] rounded-[6px]"
-                      src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
+                      src="https://i.seadn.io/gcs/files/125c94c5c1bc58f9797feb723f2cc451.jpg?auto=format&dpr=1&w=1000"
                       alt=""
                     />
                   </div>
