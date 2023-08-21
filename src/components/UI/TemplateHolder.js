@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import colors from "../../data/colors";
+import { ChatContext } from "../../contexts/ChatContext";
 
 const TemplateHolder = ({ title, children }) => {
   const { ecosystem } = useContext(EcoSystemContext);
+  const { setInputValue, setResponseText, setOutputContent } =
+    useContext(ChatContext);
 
   return (
     <div className="rounded-[18px] bg-[#f9f9f9] min-h-[200px] w-fit shadow-NFT">
@@ -22,6 +25,11 @@ const TemplateHolder = ({ title, children }) => {
           className="h-[24px] cursor-pointer grayscale"
           src="/plus.svg"
           alt=""
+          onClick={() => {
+            setInputValue("");
+            setResponseText("");
+            setOutputContent("");
+          }}
         />
       </div>
       <div className="flex flex-col p-[24px] text-black">{children}</div>
