@@ -105,42 +105,54 @@ const WalletHealth = () => {
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div className="collapse-title text-[20px] pl-0">Warning</div>
                 <div className="collapse-content pl-0 flex flex-col gap-[14px]">
-                  <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
-                    <span className="text-[16px] text-white font-bold">
-                      You have made UNLIMITED confirmations
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      className="stroke-white shrink-0 w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
-                    <span className="text-[16px] text-white font-bold">
-                      You have made UNLIMITED confirmations.
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      className="stroke-white shrink-0 w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path>
-                    </svg>
-                  </div>
+                  <a
+                    href="https://revoke.cash/address/0xCafa93E9985793E2475bD58B9215c21Dbd421fD0?chainId=1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
+                      <span className="text-[16px] text-white font-bold">
+                        You have UNLIMITED USDC spend approoved to Permit2
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        className="stroke-white shrink-0 w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                  <a
+                    href="https://revoke.cash/address/0xCafa93E9985793E2475bD58B9215c21Dbd421fD0?chainId=1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="flex flex-row justify-between alert alert-error rounded-[8px]">
+                      <span className="text-[16px] text-white font-bold">
+                        You have UNLIMITED MATIC spend approoved to Matic Bridge
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        className="stroke-white shrink-0 w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
                 </div>
               </div>
             </>
