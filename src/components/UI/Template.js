@@ -9,6 +9,7 @@ import Task from "../Templates/Task";
 import Drop from "../Templates/Drop";
 import WalletHealth from "../Templates/WalletHealth";
 import Bridge from "../Templates/Bridge";
+import BuyNFT from "../Templates/BuyNFT";
 
 const Template = ({ template }) => {
   let component;
@@ -40,6 +41,9 @@ const Template = ({ template }) => {
       break;
     case "bridge":
       component = <Bridge />;
+      break;
+    case "buyNFT":
+      component = <BuyNFT />;
       break;
     default:
       component = <None text={template} />;
