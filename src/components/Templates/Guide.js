@@ -4,15 +4,15 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import steps from "../../data/StepData";
+import getColor from "../../utils/getColor";
+import getTextColor from "../../utils/getTextColor";
 
 const Guide = () => {
   const { ecosystem } = useContext(EcoSystemContext);
-  const colors = {
-    optimism: { border: "#fff", bg: "#FF0420", text: "white" },
-    base: { border: "#0052FE", bg: "#0052FE", text: "white" },
-    zora: { border: "#909090", bg: "#909090", text: "white" },
-    mode: { border: "#DFFE00", bg: "#DFFE00", text: "black" },
-  };
+
+  const bgColor = getColor();
+  const textColor = getTextColor();
+
   const [showSteps, setShowSteps] = useState(false);
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -36,8 +36,8 @@ const Guide = () => {
               <div className="flex flex-row gap-[16px] items-center">
                 <div
                   style={{
-                    backgroundColor: colors[ecosystem].bg,
-                    color: colors[ecosystem].text,
+                    backgroundColor: bgColor,
+                    color: textColor,
                   }}
                   className="flex flex-row items-center justify-center h-[63px] w-[63px] rounded-full text-[28px] font-bold"
                 >
@@ -59,8 +59,8 @@ const Guide = () => {
                 <div className="flex flex-row gap-[16px] items-center">
                   <div
                     style={{
-                      backgroundColor: colors[ecosystem].bg,
-                      color: colors[ecosystem].text,
+                      backgroundColor: bgColor,
+                      color: textColor,
                     }}
                     className="flex flex-row items-center justify-center h-[63px] w-[63px] rounded-full text-[28px] font-bold "
                   >
@@ -72,7 +72,7 @@ const Guide = () => {
                 </div>
                 <div className="ml-[79px]">
                   <a
-                    href="https://bridge.base.org/deposit"
+                    href="https://wallet.polygon.technology/polygon/bridge/deposit"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -90,8 +90,8 @@ const Guide = () => {
               >
                 <div
                   style={{
-                    backgroundColor: colors[ecosystem].bg,
-                    color: colors[ecosystem].text,
+                    backgroundColor: bgColor,
+                    color: textColor,
                   }}
                   className="flex flex-row items-center justify-center h-[63px] w-[63px] rounded-full text-[28px] font-bold ]"
                 >
