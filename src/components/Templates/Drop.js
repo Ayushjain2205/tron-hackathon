@@ -52,25 +52,25 @@ const Drop = () => {
       <TemplateHolder title="NFT drop calender">
         <div className="flex flex-row w-[705px]">
           <div className="flex flex-col gap-[8px]">
-            <span className="text-[32px] text-black font-bold">July 2023</span>
+            <span className="text-[32px] text-black font-bold">Sept 2023</span>
             <span className="text-[20px] text-black font-bold">
-              Exiled Racers NFT
+              Entropy Squad💀
             </span>
           </div>
           <div className="grid grid-cols-3 gap-[16px] ml-[68px]">
             <img
               className="h-[138px] w-[138px] rounded-[8px]"
-              src="https://exr.mypinata.cloud/ipfs/QmNX7rTR37HvQsm5TRpWsHLn4nA2r78ye1RCW7GRyKtLAa"
+              src="https://i.seadn.io/gcs/files/fd7fb6f7a510ef9746332776af07713a.jpg?auto=format&dpr=1&w=1000"
               alt=""
             />
             <img
               className="h-[138px] w-[138px] rounded-[8px]"
-              src="https://exr.mypinata.cloud/ipfs/QmNXA32jg2rFez12XXp1VbiAQ2DsV33XDTjYCjGp9w78t5"
+              src="https://i.seadn.io/gcs/files/b6d40f582015cdad01984aacfb1ffbe7.jpg?auto=format&dpr=1&w=1000"
               alt=""
             />
             <img
               className="h-[138px] w-[138px] rounded-[8px]"
-              src="https://exr.mypinata.cloud/ipfs/QmQNd8G6znpFTAeC7cRen7J8LVan9NaiWZ4Cu7kvcpdnV6"
+              src="https://i.seadn.io/gcs/files/125c94c5c1bc58f9797feb723f2cc451.jpg?auto=format&dpr=1&w=1000"
               alt=""
             />
           </div>
@@ -86,7 +86,7 @@ const Drop = () => {
         disabled={isInputDisabled}
       />
 
-      {showReminder && <Reminder placeholder="Exiled Racers NFT drop" />}
+      {showReminder && <Reminder placeholder=" Entropy Squad💀 NFT drop" />}
     </div>
   );
 };
