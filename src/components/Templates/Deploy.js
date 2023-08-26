@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import { useSigner } from "@thirdweb-dev/react";
 import TemplateHolder from "../UI/TemplateHolder";
+import DeployButton from "../Custom/DeployButton";
 
 const Deploy = () => {
   const { ecosystem } = useContext(EcoSystemContext);
