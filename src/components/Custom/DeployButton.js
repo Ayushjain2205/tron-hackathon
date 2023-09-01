@@ -1,7 +1,7 @@
 import React from "react";
 
 const DeployButton = () => {
-  return <button>DeployButton</button>;
+  return <button>Deploy Button</button>;
 };
 
 export default DeployButton;
