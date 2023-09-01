@@ -30,7 +30,7 @@ const Step4 = () => {
             Entropy_Squad_1
           </p>
           <p className="flex flex-row gap-[8px] items-center text-[12px]">
-            <img className="h-[16px]" src="/logos/ethereum.svg" alt="" />
+            <img className="h-[16px]" src="/logos/bnb.svg" alt="" />
             <span className="text-[18px] ">0.01 ETH</span>
           </p>
         </div>
@@ -44,7 +44,7 @@ const Step4 = () => {
             Entropy_Squad_1
           </p>
           <p className="flex flex-row gap-[8px] items-center text-[12px]">
-            <img className="h-[16px]" src="/logos/ethereum.svg" alt="" />
+            <img className="h-[16px]" src="/logos/bnb.svg" alt="" />
             <span className="text-[18px] ">0.01 ETH</span>
           </p>
         </div>
@@ -58,7 +58,7 @@ const Step4 = () => {
             Entropy_Squad_1
           </p>
           <p className="flex flex-row gap-[8px] items-center text-[12px]">
-            <img className="h-[16px]" src="/logos/ethereum.svg" alt="" />
+            <img className="h-[16px]" src="/logos/bnb.svg" alt="" />
             <span className="text-[18px] ">0.01 ETH</span>
           </p>
         </div>
@@ -72,7 +72,7 @@ const Step4 = () => {
             Entropy_Squad_1
           </p>
           <p className="flex flex-row gap-[8px] items-center text-[12px]">
-            <img className="h-[16px]" src="/logos/ethereum.svg" alt="" />
+            <img className="h-[16px]" src="/logos/bnb.svg" alt="" />
             <span className="text-[18px] ">0.01 ETH</span>
           </p>
         </div>
@@ -86,7 +86,7 @@ const Step4 = () => {
             Entropy_Squad_1
           </p>
           <p className="flex flex-row gap-[8px] items-center text-[12px]">
-            <img className="h-[16px]" src="/logos/ethereum.svg" alt="" />
+            <img className="h-[16px]" src="/logos/bnb.svg" alt="" />
             <span className="text-[18px] ">0.01 ETH</span>
           </p>
         </div>
@@ -100,13 +100,13 @@ const Step4 = () => {
             Entropy_Squad_1
           </p>
           <p className="flex flex-row gap-[8px] items-center text-[12px]">
-            <img className="h-[16px]" src="/logos/ethereum.svg" alt="" />
+            <img className="h-[16px]" src="/logos/bnb.svg" alt="" />
             <span className="text-[18px] ">0.01 ETH</span>
           </p>
         </div>
       </div>
       <div className="flex flex-row w-full h-[80px] bg-[#f8f8f8] rounded-b-[15px] px-[24px] py-[16px] items-center justify-between">
-        <img className="h-[36px] w-[36px]" src="/logos/ethereum.svg" alt="" />
+        <img className="h-[36px] w-[36px]" src="/logos/bnb.svg" alt="" />
         <button className=" w-[138px] h-[48px] rounded-[8px] bg-[#262626] text-white text-[20px] ">
           BUY
         </button>
