@@ -1,8 +1,8 @@
 const colors = {
-  ethereum: { border: "#627EEA", bg: "#627EEA", text: "white" },
-  linea: { border: "#62DFFF", bg: "#62DFFF", text: "black" },
-  polygon: { border: "#8a46ff", bg: "#8a46ff", text: "white" },
-  optimism: { border: "#fff", bg: "#FF0420", text: "white" },
+  //ethereum: { border: "#627EEA", bg: "#627EEA", text: "white" },
+  bnb: { border: "#FCD435", bg: "#FCD435", text: "white" },
+  opbnb: { border: "#CC9D07", bg: "#CC9D07", text: "white" },
+  greenfield: { border: "#00BA34", bg: "#00BA34", text: "white" },
 };
 
 export default colors;

@@ -11,7 +11,7 @@ import { metamaskWallet, localWallet, paperWallet } from "@thirdweb-dev/react";
 import { EcoSystemContext } from "../contexts/EcoSystemContext";
 
 function App({ Component, pageProps }) {
-  const [ecosystem, setEcosystem] = useState("ethereum");
+  const [ecosystem, setEcosystem] = useState("bnb");
   return (
     <ThirdwebProvider
       activeChain={Ethereum}

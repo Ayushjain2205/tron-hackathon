@@ -2,15 +2,10 @@ import React, { useState, useRef, useContext, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import { useSwitchChain } from "@thirdweb-dev/react";
-import {
-  OptimismGoerli,
-  LineaTestnet,
-  Ethereum,
-  Polygon,
-} from "@thirdweb-dev/chains";
+import { Binance, Opbnb, Ethereum } from "@thirdweb-dev/chains";
 
 const EcoSelect = () => {
-  const [selectedImage, setSelectedImage] = useState("/logos/ethereum.svg");
+  const [selectedImage, setSelectedImage] = useState("/logos/bnb.svg");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [lineColor, setLineColor] = useState("#ffffff");
@@ -71,12 +66,11 @@ const EcoSelect = () => {
           <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px] ">
             <button
               onClick={() => {
-                handleChange("/logos/ethereum.svg", "ethereum");
-                switchChain(Ethereum.chainId);
+                handleChange("/logos/bnb.svg", "bnb");
               }}
             >
               <img
-                src="/logos/ethereum.svg"
+                src="/logos/bnb.svg"
                 alt="Option 2"
                 className="w-[48px] h-[48px]"
               />
@@ -85,41 +79,25 @@ const EcoSelect = () => {
           <li className="flex flex-row justify-center items-center cursor-pointer w-full h-[60px]">
             <button
               onClick={() => {
-                handleChange("/logos/linea.svg", "linea");
-                switchChain(LineaTestnet.chainId);
+                handleChange("/logos/greenfield.svg", "greenfield");
               }}
             >
               <img
-                src="/logos/linea.svg"
+                src="/logos/greenfield.svg"
                 alt="Option 4"
                 className="w-[48px] h-[48px]"
               />
             </button>
           </li>
-          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px]">
+          <li className="flex flex-row justify-center items-center cursor-pointer w-full h-[60px]">
             <button
               onClick={() => {
-                handleChange("/logos/polygon.svg", "polygon");
-                switchChain(Polygon.chainId);
+                handleChange("/logos/opbnb.svg", "opbnb");
               }}
             >
               <img
-                src="/logos/polygon.svg"
+                src="/logos/opbnb.svg"
                 alt="Option 3"
-                className="w-[48px] h-[48px]"
-              />
-            </button>
-          </li>
-          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px] ">
-            <button
-              onClick={() => {
-                handleChange("/logos/optimism.svg", "optimism");
-                switchChain(OptimismGoerli.chainId);
-              }}
-            >
-              <img
-                src="/logos/optimism.svg"
-                alt="Option 1"
                 className="w-[48px] h-[48px]"
               />
             </button>
