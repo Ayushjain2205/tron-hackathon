@@ -6,10 +6,9 @@ import panel_items from "../../data/panel_items";
 const SidePanel = ({ setInputValue, setResponseText, setOutputContent }) => {
   const { ecosystem } = useContext(EcoSystemContext);
 
-  const cardsRef = useRef(null); // Initialize the ref
+  const cardsRef = useRef(null);
 
   const scrollCards = () => {
-    // Scroll the cards div by 100 pixels (or any other value you prefer)
     cardsRef.current.scrollBy({ top: 100, behavior: "smooth" });
   };
 
