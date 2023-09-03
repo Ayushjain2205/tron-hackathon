@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import Step1 from "../Steps/Step1";
 import Step2 from "../Steps/Step2";
 import Step3 from "../Steps/Step3";
-import Step5 from "../Steps/Step5";
 import Step4 from "../Steps/Step4";
+import Step5 from "../Steps/Step5";
 
 const TemplatePreview = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 5;
+
+  const steps = [<Step1 />, <Step2 />, <Step3 />, <Step4 />, <Step5 />];
 
   const handleNext = () => {
     if (currentStep < totalSteps) {
@@ -62,12 +64,7 @@ const TemplatePreview = () => {
           </svg>
         </div>
       </div>
-
-      {currentStep === 1 && <Step1 />}
-      {currentStep === 2 && <Step2 />}
-      {currentStep === 3 && <Step3 />}
-      {currentStep === 4 && <Step4 />}
-      {currentStep === 5 && <Step5 />}
+      {steps[currentStep - 1]}
     </div>
   );
 };
