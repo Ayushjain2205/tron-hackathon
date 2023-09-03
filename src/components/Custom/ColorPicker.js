@@ -1,45 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { TwitterPicker } from "react-color";
 
 const Colorpicker = ({ rgba }) => {
-  const initialColor = rgba
-    ? parseRGBA(rgba)
-    : {
-        r: "217",
-        g: "217",
-        b: "217",
-        a: "1",
-      };
+  const initialColor = useMemo(() => {
+    return rgba ? parseRGBA(rgba) : { r: 217, g: 217, b: 217, a: 1 };
+  }, [rgba]);
 
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
   const [color, setColor] = useState(initialColor);
 
-  const handleClick = () => {
-    setDisplayColorPicker(!displayColorPicker);
-  };
+  const toggleColorPicker = () => setDisplayColorPicker((prev) => !prev);
+  const closeColorPicker = () => setDisplayColorPicker(false);
 
-  const handleClose = () => {
-    setDisplayColorPicker(false);
-  };
-
-  const handleChange = (newColor) => {
-    setColor(newColor.rgb);
-  };
+  const onColorChange = (newColor) => setColor(newColor.rgb);
 
   return (
     <div>
-      <div className="rounded-full cursor-pointer" onClick={handleClick}>
-        <div
-          className="w-[34px] h-[34px] rounded-full"
-          style={{
-            background: `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`,
-          }}
-        />
-      </div>
+      <div
+        className="w-[34px] h-[34px] rounded-full cursor-pointer"
+        onClick={toggleColorPicker}
+        style={{
+          background: `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`,
+        }}
+      />
       {displayColorPicker && (
         <div className="absolute z-10">
-          <div className="fixed inset-0" onClick={handleClose} />
-          <TwitterPicker color={color} onChange={handleChange} />
+          <div className="fixed inset-0" onClick={closeColorPicker} />
+          <TwitterPicker color={color} onChange={onColorChange} />
         </div>
       )}
     </div>
