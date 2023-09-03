@@ -3,45 +3,45 @@ import React from "react";
 const ChooseTemplate = ({ handleNext }) => {
   const [selectedTitles, setSelectedTitles] = React.useState([]);
 
+  const templates = [
+    {
+      title: "Generate NFTs",
+      content: "Template that can help users generate a NFT within 2 clicks.",
+    },
+    {
+      title: "Buy NFT",
+      content: "Template that can help users buy NFTs within 2 clicks.",
+    },
+    {
+      title: "Deploy contracts",
+      content:
+        "A smart contract will be generated for you, from a range of options.",
+    },
+    {
+      title: "User Manual",
+      content: "Any guide that the user needs, the agent will be here.",
+    },
+  ];
+
   const handleSelect = (title) => {
-    if (selectedTitles.includes(title)) {
-      setSelectedTitles((prev) => prev.filter((t) => t !== title));
-    } else {
-      setSelectedTitles((prev) => [...prev, title]);
-    }
+    setSelectedTitles((prev) =>
+      prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
+    );
   };
 
   return (
-    <div className="relative mt-[42px] ">
+    <div className="relative mt-[42px]">
       <div className="grid grid-cols-4 gap-4">
-        <TemplateCard
-          title="Generate NFTs"
-          content="Template that can help users generate a NFT within 2 clicks."
-          onSelect={handleSelect}
-          isSelected={selectedTitles.includes("Generate NFTs")}
-          index={1}
-        />
-        <TemplateCard
-          title="Buy NFT"
-          content="Template that can help users buy NFTS within 2 clicks. The agent will also suggest and scout NFTs for the user."
-          onSelect={handleSelect}
-          isSelected={selectedTitles.includes("Buy NFT")}
-          index={2}
-        />
-        <TemplateCard
-          title="Deploy contracts"
-          content="A smart contract will be generate for you, from a range of options. A NFT drop contract, a token NFT & more."
-          onSelect={handleSelect}
-          isSelected={selectedTitles.includes("Deploy contracts")}
-          index={3}
-        />
-        <TemplateCard
-          title="User Manual"
-          content="Any guide that the user needs, the agent will be here. All and any information about your business will be presented in an understandable manner"
-          onSelect={handleSelect}
-          isSelected={selectedTitles.includes("User Manual")}
-          index={4}
-        />
+        {templates.map((template, index) => (
+          <TemplateCard
+            key={index}
+            title={template.title}
+            content={template.content}
+            onSelect={handleSelect}
+            isSelected={selectedTitles.includes(template.title)}
+            index={index + 1}
+          />
+        ))}
       </div>
       <div className="fixed bottom-0 right-0 w-full h-[80px] bg-[#f9f9f9]">
         <div className="flex flex-row gap-[24px] h-full items-center justify-end px-[48px]">
@@ -61,7 +61,7 @@ const ChooseTemplate = ({ handleNext }) => {
   );
 };
 
-const TemplateCard = ({ title, onSelect, isSelected, index, content }) => {
+const TemplateCard = ({ title, content, onSelect, isSelected, index }) => {
   return (
     <div
       className={`flex flex-col w-[389px] cursor-pointer ${
@@ -80,7 +80,6 @@ const TemplateCard = ({ title, onSelect, isSelected, index, content }) => {
             alt=""
           />
         </div>
-
         <p className="text-[20px] text-[#26262680] leading-[24px] mt-[33px] mb-[28px] h-[117px]">
           {content}
         </p>
