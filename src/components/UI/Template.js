@@ -11,46 +11,26 @@ import WalletHealth from "../Templates/WalletHealth";
 import Bridge from "../Templates/Bridge";
 import BuyNFT from "../Templates/BuyNFT";
 
+const componentMapping = {
+  mintNFT: Create,
+  smartContract: Deploy,
+  guide: Guide,
+  sendMoney: SendMoney,
+  reminder: Reminder,
+  task: Task,
+  drop: Drop,
+  walletHealth: WalletHealth,
+  bridge: Bridge,
+  buyNFT: BuyNFT,
+};
+
 const Template = ({ template }) => {
-  let component;
-
-  switch (template) {
-    case "mintNFT":
-      component = <Create />;
-      break;
-    case "smartContract":
-      component = <Deploy />;
-      break;
-    case "guide":
-      component = <Guide />;
-      break;
-    case "sendMoney":
-      component = <SendMoney />;
-      break;
-    case "reminder":
-      component = <Reminder />;
-      break;
-    case "task":
-      component = <Task />;
-      break;
-    case "drop":
-      component = <Drop />;
-      break;
-    case "walletHealth":
-      component = <WalletHealth />;
-      break;
-    case "bridge":
-      component = <Bridge />;
-      break;
-    case "buyNFT":
-      component = <BuyNFT />;
-      break;
-    default:
-      component = <None text={template} />;
-      break;
-  }
-
-  return <div>{component}</div>;
+  const Component = componentMapping[template] || None;
+  return (
+    <div>
+      <Component />
+    </div>
+  );
 };
 
 export default Template;
