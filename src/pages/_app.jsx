@@ -4,6 +4,8 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { Opbnb, Binance, BinanceTestnet, Ethereum } from "@thirdweb-dev/chains";
 import { metamaskWallet, localWallet, paperWallet } from "@thirdweb-dev/react";
 import { EcoSystemContext } from "../contexts/EcoSystemContext";
+import { WalletProvider } from "../contexts/WalletContext";
+import { Toaster } from "react-hot-toast";
 
 function App({ Component, pageProps }) {
   const [ecosystem, setEcosystem] = useState("bnb");
@@ -20,9 +22,12 @@ function App({ Component, pageProps }) {
         }),
       ]}
     >
-      <EcoSystemContext.Provider value={{ ecosystem, setEcosystem }}>
-        <Component {...pageProps} />
-      </EcoSystemContext.Provider>
+      <WalletProvider>
+        <EcoSystemContext.Provider value={{ ecosystem, setEcosystem }}>
+          <Toaster />
+          <Component {...pageProps} />
+        </EcoSystemContext.Provider>
+      </WalletProvider>
     </ThirdwebProvider>
   );
 }
