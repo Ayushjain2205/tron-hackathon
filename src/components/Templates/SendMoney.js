@@ -51,7 +51,7 @@ const SendMoney = () => {
             id=""
           />
           <span className=" text-center text-[24px] text-black font-bold">
-            ETH
+            BNB
           </span>
 
           <div className="flex flex-col gap-[16px]">
@@ -106,7 +106,7 @@ const SendMoney = () => {
                       SENT!
                     </span>
                     <a
-                      href="https://moonscan.io/tx/0x4e22217253d2c01ca3985ae3ee8a2aea7ab7fca875a589aeadb5e6ff0114b9ef"
+                      href="https://bscscan.com/tx/0xecb6b0972d09a9aaf6945babe584ac0227d044c1c6295a97dcdb210f560d1840"
                       target="_blank"
                       rel="noreferrer"
                       className="text-[16px] text-[#007BFF] mt-[32px] underline"
