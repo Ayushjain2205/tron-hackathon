@@ -43,7 +43,7 @@ const WalletHealth = () => {
                   className="font-bold text-[20px]"
                   style={{ color: bgColor }}
                 >
-                  70 BNB
+                  0.7 BNB
                 </span>
               </div>
               <div className="flex flex-row w-[700px] justify-between">
@@ -52,7 +52,7 @@ const WalletHealth = () => {
                   className=" font-bold text-[20px]"
                   style={{ color: bgColor }}
                 >
-                  426 BNB
+                  46 BNB
                 </span>
               </div>
               <div className="flex flex-row w-[700px] justify-between">

@@ -2,7 +2,7 @@ import React from "react";
 
 const CelerNetwork = () => (
   <iframe
-    src="https://cbridge.celer.network/1/59144/iUSD"
+    src="https://cbridge.celer.network/1/56/ETH"
     width="600px"
     height="650px"
     style={{ border: "none" }}
