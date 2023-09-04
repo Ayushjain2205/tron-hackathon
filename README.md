@@ -16,13 +16,6 @@ Imagine the vast spectrum of web3 users employing this agent to:
 - 😚 Engage with an interactive user manual
 - 🌐 Connect with the community of the ecosystem, and much more.
 
-### 🛡 Use of Consensys products:
-
-- Infura API 🌐 used to get all wallet, transaction, and block data across various supported chains.
-- Metamask SDK 🦊 for wallet operations like signing and performing transactions.
-- Linea 📜 - Deployment and querying supported by the Agent.
-- HAL 🔔 - Streams and Blockchain event-based notifications.
-
 ### 🔄 Switching Ecosystems
 
 A standout feature? The ability to switch ecosystems at the drop of a hat! With just one click, users can transition between AI agents of various ecosystems who've partnered with us.
@@ -115,9 +108,8 @@ Embrace the **ALLY** MVP! Let's revolutionize the Web3 space, together!
 - 🎨 NFTs: Crafted using replicate and unfailingly deployed on Linea.
 - 🤖 AI Interactions: Empowered by OpenAI, inclusive of ChatGPT.
 - ⛓️ Blockchain: The Thirdweb SDK and API ensures seamless blockchain operations.
-- 🔔 Blockchain Notifications and Streams: HAL stands guard, facilitating action-based notifications.
 - 🔐 Security API: Trust in Go+ Security APIs to vigilantly check for malicious address exposure, token approval anomalies, and deceptive phishing links 🎣.
 - 🌐 Web Scraping: Data extraction is a breeze with Puppeteer and Cheerio.
-- 🔥 Network Compatibility: The Agent is versatile, operating smoothly across networks like Ethereum, Linea, Polygon, and Optimism.
+- 🔥 Network Compatibility: The Agent is versatile, operating smoothly across networks like Binance smart chain, opBNB, and greenfield.
 
 **ALLY**: Crafting the Future of Web3 Experience!
