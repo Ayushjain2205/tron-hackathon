@@ -72,7 +72,7 @@ const Guide = () => {
                 </div>
                 <div className="ml-[79px]">
                   <a
-                    href="https://wallet.polygon.technology/polygon/bridge/deposit"
+                    href="https://opbnb-testnet-bridge.bnbchain.org/deposit"
                     target="_blank"
                     rel="noreferrer"
                   >
