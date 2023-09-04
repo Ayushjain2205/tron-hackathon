@@ -19,6 +19,7 @@ const DeployButton = () => {
     if (isConnected) {
       try {
         setDeploying(true);
+        console.log(isConnected);
         await sdk?.deployer.deployNFTDrop({
           name: "My NFT Drop",
           primary_sale_recipient: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",

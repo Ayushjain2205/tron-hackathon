@@ -5,16 +5,26 @@ import TemplateHolder from "../UI/TemplateHolder";
 import DeployButton from "../Buttons/DeployButton";
 import contract_templates from "../../data/contract_data";
 
-const InputBox = ({ label, value }) => (
-  <div className="flex flex-col">
-    <label className="text-[16px] text-black text-opacity-90 mb-[8px]">
-      {label}
-    </label>
-    <div className="w-[379px] h-[40px] bg-white rounded-[10px] flex flex-row items-center p-[14px] pl-[16px] mb-[8px]">
+const InputField = ({ label, value }) => (
+  <div className="flex flex-col mb-[8px]">
+    <p className="text-[16px] text-black text-opacity-90 mb-[8px]">{label}</p>
+    <div className="w-[379px] h-[40px] bg-white rounded-[10px] flex flex-row items-center p-[14px] pl-[16px]">
       <input
         type="text"
         value={value}
         className="w-[450px] h-[20px] text-[16px] focus:outline-none text-[#26262690] bg-[#fff]"
+      />
+    </div>
+  </div>
+);
+
+const TextAreaField = ({ label, value }) => (
+  <div className="flex flex-col mb-[8px]">
+    <p className="text-[16px] text-black text-opacity-90 mb-[8px]">{label}</p>
+    <div className="w-[379px] h-[68px] bg-white rounded-[10px] flex flex-row items-center p-[14px] pl-[16px]">
+      <textarea
+        value={value}
+        className="w-[450px] h-[68px] text-[16px] focus:outline-none text-[#26262690] bg-[#fff]"
       />
     </div>
   </div>
@@ -25,18 +35,15 @@ const Deploy = () => {
   const [showDrop, setShowDrop] = useState(false);
   const [isSigned, setIsSigned] = useState(false);
 
-  const DEFAULT_NAME = "My Art NFT";
-  const DEFAULT_DESC =
-    "A tokenized representation of the Starry Night painting";
-  const DEFAULT_SYMBOL = "MAT";
-  const DEFAULT_ADDRESS = "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0";
-  const DEFAULT_PERCENTAGE = "10%";
-
-  const [imageName, setImageName] = useState(DEFAULT_NAME);
-  const [imageDescription, setImageDescription] = useState(DEFAULT_DESC);
-  const [symbol, setSymbol] = useState(DEFAULT_SYMBOL);
-  const [recipientAddress, setRecipientAddress] = useState(DEFAULT_ADDRESS);
-  const [percentage, setPercentage] = useState(DEFAULT_PERCENTAGE);
+  const [imageName, setImageName] = useState("My Art NFT");
+  const [imageDescription, setImageDescription] = useState(
+    "A tokenized representation of the Starry Night painting."
+  );
+  const [symbol, setSymbol] = useState("MAT");
+  const [recipientAddress, setRecipientAddress] = useState(
+    "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0"
+  );
+  const [percentage, setPercentage] = useState("10%");
 
   const signer = useSigner();
 
@@ -44,7 +51,6 @@ const Deploy = () => {
     const message = `Name: ${imageName}, Description: ${imageDescription}, Symbol: ${symbol}, Recipient Address: ${recipientAddress}, Percentage: ${percentage}`;
     try {
       const signature = await signer.signMessage(message);
-      console.log(signature);
       setIsSigned(true);
     } catch (err) {
       console.error("Error signing the message:", err);
@@ -80,16 +86,24 @@ const Deploy = () => {
         <div className="drop">
           <p className="text-[24px] font-bold">NFT Drop</p>
           <div className="flex flex-row gap-[24px] mt-[24px]">
-            <InputBox label="Upload an image" value={imageName} />
-            <InputBox label="Name" value={imageName} />
-            <InputBox label="Description" value={imageDescription} />
-            <InputBox label="Symbol" value={DEFAULT_SYMBOL} />
-            <InputBox label="Recipient address" value={DEFAULT_ADDRESS} />
-            <InputBox label="Percentage" value={DEFAULT_PERCENTAGE} />
+            <div className="flex flex-col">
+              <p className="text-[16px] text-black text-opacity-90 mb-[8px]">
+                Upload an image
+              </p>
+              <div className="w-[379px] h-[117px] bg-white rounded-[10px] flex flex-row items-center justify-center p-[14px] pl-[16px] mb-[8px]">
+                <img src="/images/upload.svg" alt="" />
+              </div>
+              <InputField label="Name" value={imageName} />
+              <TextAreaField label="Description" value={imageDescription} />
+            </div>
+            <div className="flex flex-col">
+              <InputField label="Symbol" value={symbol} />
+              <InputField label="Recipient address" value={recipientAddress} />
+              <InputField label="Percentage" value={percentage} />
+            </div>
           </div>
         </div>
       )}
-
       <div className="flex flex-row mt-[25px] justify-between">
         <img
           className="h-[36px] w-[36px]"
