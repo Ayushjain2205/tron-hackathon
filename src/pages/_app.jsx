@@ -1,12 +1,7 @@
 import "@/styles/globals.css";
 import React, { useState } from "react";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-import {
-  OptimismGoerli,
-  LineaTestnet,
-  Ethereum,
-  Polygon,
-} from "@thirdweb-dev/chains";
+import { Opbnb, Binance, BinanceTestnet, Ethereum } from "@thirdweb-dev/chains";
 import { metamaskWallet, localWallet, paperWallet } from "@thirdweb-dev/react";
 import { EcoSystemContext } from "../contexts/EcoSystemContext";
 
@@ -14,8 +9,8 @@ function App({ Component, pageProps }) {
   const [ecosystem, setEcosystem] = useState("bnb");
   return (
     <ThirdwebProvider
-      activeChain={Ethereum}
-      supportedChains={[OptimismGoerli, LineaTestnet, Ethereum, Polygon]}
+      activeChain={BinanceTestnet}
+      supportedChains={[Opbnb, Binance, Ethereum, BinanceTestnet]}
       clientId="7a96064a5047b6af0b9b1125a11562ca"
       supportedWallets={[
         metamaskWallet(),
