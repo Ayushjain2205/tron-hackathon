@@ -5,12 +5,12 @@ import { useSwitchChain } from "@thirdweb-dev/react";
 import { Binance, Opbnb, Ethereum } from "@thirdweb-dev/chains";
 
 const EcoSelect = () => {
-  const [selectedImage, setSelectedImage] = useState("/logos/bnb.svg");
+  const { setEcosystem, ecosystem } = useContext(EcoSystemContext);
+
+  const [selectedImage, setSelectedImage] = useState(`/logos/${ecosystem}.svg`);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [lineColor, setLineColor] = useState("#ffffff");
-
-  const { setEcosystem } = useContext(EcoSystemContext);
 
   const switchChain = useSwitchChain();
 
