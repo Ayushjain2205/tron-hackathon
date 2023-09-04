@@ -6,7 +6,7 @@ const panel_items = [
   },
   {
     title: "Deploy smart contract",
-    prompt: "Help me create a NFT collection on Linea network",
+    prompt: "Help me create a NFT collection on opBNB network",
     img: "/cats/cat3.svg",
   },
   {
@@ -22,17 +22,17 @@ const panel_items = [
   },
   {
     title: "Upcoming Airdrops",
-    prompt: "Help me create a NFT collection on mode network",
+    prompt: "Tell me about upcoming airdrops",
     img: "/cats/cat4.svg",
   },
   {
     title: "Bridge Funds",
-    prompt: "I want to bridge ETH from Ethereum to Linea",
+    prompt: "I want to bridge ETH from Ethereum to BNB",
     img: "/cats/cat5.svg",
   },
   {
     title: "Send money",
-    prompt: "I want to transfer 0.1 ETH to Joe",
+    prompt: "I want to transfer 0.1 BNB to Joe",
     img: "/cats/cat3.svg",
   },
   {

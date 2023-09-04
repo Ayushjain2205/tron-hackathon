@@ -25,7 +25,7 @@ export default async function handler(req, res) {
   {"Check Wallet Health":"walletHealth"},
   {"Upcoming airdrops":"drop"},
   {"Step by step guide" : "guide"},
-  {"create a task":"task"},
+  {"create a task like scout for NFTs":"task"},
   {"send money":"sendMoney"},
   {"bridge funds":"bridge"}
   ]
