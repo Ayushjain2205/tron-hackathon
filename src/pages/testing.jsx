@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/UI/Layout";
-import DeployButton from "../components/Custom/DeployButton";
+import DeployButton from "../components/Buttons/DeployButton";
 
 const Testing = () => {
   return (

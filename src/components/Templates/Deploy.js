@@ -2,13 +2,12 @@ import React, { useContext, useState } from "react";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import { useSigner } from "@thirdweb-dev/react";
 import TemplateHolder from "../UI/TemplateHolder";
-import DeployButton from "../Custom/DeployButton";
+import DeployButton from "../Buttons/DeployButton";
 
 const Deploy = () => {
   const { ecosystem } = useContext(EcoSystemContext);
   const [showDrop, setShowDrop] = useState(false);
   const [isSigned, setIsSigned] = useState(false);
-  const [deploying, setDeploying] = useState(false);
 
   const [imageName, setImageName] = useState("My Art NFT");
   const [imageDescription, setImageDescription] = useState(
@@ -180,19 +179,7 @@ const Deploy = () => {
                 CONFIRM
               </button>
             ) : (
-              <button
-                className="flex flex-row items-center justify-center w-[246px] h-[60px] text-white font-bold text-[20px] rounded-[8px] bg-[#262626] cursor-pointer"
-                onClick={() => setDeploying(true)}
-              >
-                {!deploying ? (
-                  "DEPLOY"
-                ) : (
-                  <>
-                    <span className="loading loading-spinner"></span>
-                    &nbsp;DEPLOYING
-                  </>
-                )}
-              </button>
+              <DeployButton />
             )}
           </>
         )}
