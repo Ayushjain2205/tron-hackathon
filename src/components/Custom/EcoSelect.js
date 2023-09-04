@@ -61,9 +61,9 @@ const EcoSelect = () => {
       {isOpen && (
         <ul
           ref={dropdownRef}
-          className="z-50 flex flex-col absolute w-[100px] items-center  border border-[#4E4C4C] rounded-[10px] bg-[#454545] mt-[12px] shadow-lg"
+          className="z-50 flex flex-col absolute w-[100px] items-center border border-[#4E4C4C] rounded-[10px] bg-[#454545] mt-[12px] shadow-lg"
         >
-          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px] ">
+          <li className="flex flex-row justify-center items-center cursor-pointer border-b-2 border-[#4E4C4C] w-full h-[60px] relative group">
             <button
               onClick={() => {
                 handleChange("/logos/bnb.svg", "bnb");
@@ -75,8 +75,11 @@ const EcoSelect = () => {
                 className="w-[48px] h-[48px]"
               />
             </button>
+            <div className="hidden group-hover:block absolute bg-black text-white text-xs rounded-md p-1 right-0 top-1/2 translate-y-[-50%] mr-[75px]">
+              BNB
+            </div>
           </li>
-          <li className="flex flex-row justify-center items-center cursor-pointer w-full h-[60px]">
+          <li className="flex flex-row justify-center items-center cursor-pointer w-full h-[60px] relative group">
             <button
               onClick={() => {
                 handleChange("/logos/greenfield.svg", "greenfield");
@@ -88,8 +91,11 @@ const EcoSelect = () => {
                 className="w-[48px] h-[48px]"
               />
             </button>
+            <div className="hidden group-hover:block absolute bg-black text-white text-xs rounded-md p-1 right-0 top-1/2 translate-y-[-50%] mr-[75px]">
+              Greenfield
+            </div>
           </li>
-          <li className="flex flex-row justify-center items-center cursor-pointer w-full h-[60px]">
+          <li className="flex flex-row justify-center items-center cursor-pointer w-full h-[60px] relative group">
             <button
               onClick={() => {
                 handleChange("/logos/opbnb.svg", "opbnb");
@@ -101,6 +107,9 @@ const EcoSelect = () => {
                 className="w-[48px] h-[48px]"
               />
             </button>
+            <div className="hidden group-hover:block absolute bg-black text-white text-xs rounded-md p-1 right-0 top-1/2 translate-y-[-50%] mr-[75px]">
+              OpBNB
+            </div>
           </li>
         </ul>
       )}

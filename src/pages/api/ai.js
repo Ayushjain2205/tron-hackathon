@@ -26,7 +26,7 @@ export default async function handler(req, res) {
   {"Upcoming airdrops":"drop"},
   {"Step by step guide" : "guide"},
   {"create a task like scout for NFTs":"task"},
-  {"send money":"sendMoney"},
+  {"send ETH or BNB money":"sendMoney"},
   {"bridge funds":"bridge"}
   ]
 
