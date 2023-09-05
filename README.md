@@ -33,60 +33,60 @@ The heart of "ally" lies in its general templates usable across any and all Web3
 <details>
     <summary>🔗 <b>Mint NFT</b></summary>
     <br>
-    <img alt="mint" src="https://s11.gifyu.com/images/SgwLx.gif">
+    <img alt="mint" src="https://s11.gifyu.com/images/SgAzC.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Deploy</b></summary>
     <br>
-    <img alt="smartContract" src="https://s11.gifyu.com/images/SgwLd.gif">
+    <img alt="smartContract" src="https://s11.gifyu.com/images/SgAMQ.gif">
 </details>
 
 <details>
     <summary>🔗 <b>User Manual</b></summary>
     <br>
-    <img alt="guide" src="https://s11.gifyu.com/images/SgwLn.gif">
+    <img alt="guide" src="https://s11.gifyu.com/images/SgAMg.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Send money</b></summary>
-    <img alt="send money" src="https://s11.gifyu.com/images/SgwLc.gif">
+    <img alt="send money" src="https://s11.gifyu.com/images/SgAM8.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Reminder</b></summary>
     <br>
-    <img alt="Reminder" src="https://s11.gifyu.com/images/SgwLC.gif">
+    <img alt="Reminder" src="https://s11.gifyu.com/images/SgAMZ.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Task</b></summary>
     <br>
-    <img alt="task" src="https://s11.gifyu.com/images/Sgwsz.gif">
+    <img alt="task" src="https://s11.gifyu.com/images/SgAMo.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Airdrops</b></summary>
     <br>
-    <img alt="drop" src="https://s11.gifyu.com/images/SgwsK.gif">
+    <img alt="drop" src="https://s11.gifyu.com/images/SgAMZ.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Wallet health</b></summary>
     <br>
-    <img alt="wallet health" src="https://s11.gifyu.com/images/SgwsN.gif">
+    <img alt="wallet health" src="https://s11.gifyu.com/images/SgAMJ.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Bridge Funds</b></summary>
     <br>
-    <img alt="bridge" src="https://s11.gifyu.com/images/Sgwsw.gif">
+    <img alt="bridge" src="https://s11.gifyu.com/images/SgAMe.gif">
 </details>
 
 <details>
     <summary>🔗 <b>Buy NFT</b></summary>
     <br>
-    <img alt="buy NFT" src="https://s11.gifyu.com/images/Sgwsh.gif">
+    <img alt="buy NFT" src="https://s11.gifyu.com/images/SgAzC.gif">
 </details>
 
 ### 🌍 Vision
