@@ -2,7 +2,7 @@ import React, { useState, useRef, useContext, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { EcoSystemContext } from "../../contexts/EcoSystemContext";
 import { useSwitchChain } from "@thirdweb-dev/react";
-import { Binance, Opbnb, Ethereum } from "@thirdweb-dev/chains";
+import { Binance, BinanceTestnet, Opbnb, Ethereum } from "@thirdweb-dev/chains";
 
 const EcoSelect = () => {
   const { setEcosystem, ecosystem } = useContext(EcoSystemContext);
@@ -67,6 +67,7 @@ const EcoSelect = () => {
             <button
               onClick={() => {
                 handleChange("/logos/bnb.svg", "bnb");
+                switchChain(BinanceTestnet.chainId);
               }}
             >
               <img
@@ -99,6 +100,7 @@ const EcoSelect = () => {
             <button
               onClick={() => {
                 handleChange("/logos/opbnb.svg", "opbnb");
+                switchChain(Opbnb.chainId);
               }}
             >
               <img

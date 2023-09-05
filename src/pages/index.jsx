@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     if (address) {
-      router.push("/agent");
+      router.push("/create");
     }
   }, [address, router]);
 
